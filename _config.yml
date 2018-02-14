@@ -1,19 +1,24 @@
-# Site settings
-title: CS231n Convolutional Neural Networks for Visual Recognition
-email: karpathy@cs.stanford.edu
-description: "Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition."
-baseurl: ""
-url: "http://cs231n.github.io"
-twitter_username: cs231n
-github_username:  cs231n
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: 天猫前端
 
-# Build settings
+title: 天猫前端
+description: 天猫前端
+url: "http://tmallfe.github.io"
+
+author:
+  name: 天猫前端
+  email: join-tmallfe@list.alibaba-inc.com
+  github: tmallfe
+  bio: keep calm and carry on!
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
+
 markdown: kramdown
-permalink: pretty
-
-highlighter: rouge
-kramdown:
-  input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
-

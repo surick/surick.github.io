@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="npm,">
+  <meta name="keywords" content="cron,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
-<meta name="keywords" content="npm">
+<meta name="description" content="##Cron表达式示例： ###表达式说明  “0 0 12   ? “每天12点运行 “0 15 10   ?”每天10:15运行 “0 15 10   ? 2011”2011年的每天10：15运行 “0  14  * ?”每天14点到15点之间每分钟运行一次，开始于14:00，结束于14:59。 “0 0/5 14   ?”每天14点到15点每5分钟运行一次，开始于14:00，结束于14:55">
+<meta name="keywords" content="cron">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Solved cb() never called!">
-<meta property="og:url" content="http://surick.github.io/2019/04/09/first-blog/index.html">
+<meta property="og:title" content="cron表达式">
+<meta property="og:url" content="http://surick.github.io/2019/04/15/cron表达式/index.html">
 <meta property="og:site_name" content="Surick&#39;s blog">
-<meta property="og:description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
+<meta property="og:description" content="##Cron表达式示例： ###表达式说明  “0 0 12   ? “每天12点运行 “0 15 10   ?”每天10:15运行 “0 15 10   ? 2011”2011年的每天10：15运行 “0  14  * ?”每天14点到15点之间每分钟运行一次，开始于14:00，结束于14:59。 “0 0/5 14   ?”每天14点到15点每5分钟运行一次，开始于14:00，结束于14:55">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-09T08:25:46.737Z">
+<meta property="og:updated_time" content="2019-04-15T03:04:26.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Solved cb() never called!">
-<meta name="twitter:description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
+<meta name="twitter:title" content="cron表达式">
+<meta name="twitter:description" content="##Cron表达式示例： ###表达式说明  “0 0 12   ? “每天12点运行 “0 15 10   ?”每天10:15运行 “0 15 10   ? 2011”2011年的每天10：15运行 “0  14  * ?”每天14点到15点之间每分钟运行一次，开始于14:00，结束于14:59。 “0 0/5 14   ?”每天14点到15点每5分钟运行一次，开始于14:00，结束于14:55">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://surick.github.io/2019/04/09/first-blog/">
+  <link rel="canonical" href="http://surick.github.io/2019/04/15/cron表达式/">
 
 
 
 
 
-  <title>Solved cb() never called! | Surick's blog</title>
+  <title>cron表达式 | Surick's blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/09/first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/15/cron表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Surick">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Solved cb() never called!</h1>
+          <h1 class="post-title" itemprop="name headline">cron表达式</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T14:16:26+08:00">
-                2019-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T10:54:15+08:00">
+                2019-04-15
               </time>
             
 
@@ -301,8 +301,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/09/first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/09/first-blog/" itemprop="commentCount"></span>
+                <a href="/2019/04/15/cron表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/15/cron表达式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -335,12 +335,51 @@
       
 
       
-        <h2 id="npm-ERR-cb-never-called"><a href="#npm-ERR-cb-never-called" class="headerlink" title="npm ERR! cb() never called!"></a>npm ERR! cb() never called!</h2><ul>
-<li>First of all, verify your node.js version using your terminal with this simple command<br>  <code>node -v</code></li>
-<li>Clear your npm cache<br>  <code>sudo npm cache clean -f</code></li>
-<li>Install the latest version of the Node helper<br>  <code>npm install -g n</code></li>
-<li>Tell the helper (n) to install the latest stable version of Node<br>  <code>sudo n stable</code></li>
-<li>After previous commands finish you will be up-to-date. Let’s run our install again<br>  <code>npm install</code></li>
+        <p>##Cron表达式示例：</p>
+<p>###表达式说明</p>
+<ul>
+<li>“0 0 12 <em> </em> ? “每天12点运行</li>
+<li>“0 15 10 <em> </em> ?”每天10:15运行</li>
+<li>“0 15 10 <em> </em> ? 2011”2011年的每天10：15运行</li>
+<li>“0 <em> 14 </em> * ?”每天14点到15点之间每分钟运行一次，开始于14:00，结束于14:59。</li>
+<li>“0 0/5 14 <em> </em> ?”每天14点到15点每5分钟运行一次，开始于14:00，结束于14:55。</li>
+<li>“0 0/5 14,18 <em> </em> ?”每天14点到15点每5分钟运行一次，此外每天18点到19点每5钟也运行一次。</li>
+<li>“0 0-5 14 <em> </em> ?”每天14:00点到14:05，每分钟运行一次。</li>
+<li>“0 10,44 14 ? 3 WED”3月每周三的14:10分到14:44，每分钟运行一次。</li>
+<li>“0 15 10 ? * MON-FRI”每周一，二，三，四，五的10:15分运行。</li>
+<li>“0 15 10 15 * ?”每月15日10:15分运行。</li>
+<li>“0 15 10 L * ?”每月最后一天10:15分运行。</li>
+<li>“0 15 10 ? * 6L”每月最后一个星期五10:15分运行。</li>
+<li>“0 15 10 ? * 6L 2007-2009”在2007,2008,2009年每个月的最后一个星期五的10:15分运行。</li>
+<li>“0 15 10 ? * 6#3”每月第三个星期五的10:15分运行。</li>
+<li>每隔5秒执行一次：<em>/5 </em> <em> </em> * ?</li>
+<li>每隔1分钟执行一次：0 <em>/1 </em> <em> </em> ?</li>
+<li>每天23点执行一次：0 0 23 <em> </em> ?</li>
+<li>每天凌晨1点执行一次：0 0 1 <em> </em> ?</li>
+<li>每月1号凌晨1点执行一次：0 0 1 1 * ?</li>
+<li>每月最后一天23点执行一次：0 0 23 L * ?</li>
+<li>每周星期天凌晨1点实行一次：0 0 1 ? * L</li>
+<li>在26分、29分、33分执行一次：0 26,29,33 <em> </em> * ?</li>
+<li>每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 <em> </em> ?</li>
+<li>0 0 10,14,16 <em> </em> ? 每天上午10点，下午2点，4点</li>
+<li>0 0/30 9-17 <em> </em> ? 朝九晚五工作时间内每半小时</li>
+<li>0 0 12 ? * WED 表示每个星期三中午12点 </li>
+<li>“0 0 12 <em> </em> ?” 每天中午12点触发 </li>
+<li>“0 15 10 ? <em> </em>“ 每天上午10:15触发 </li>
+<li>“0 15 10 <em> </em> ?” 每天上午10:15触发 </li>
+<li>“0 15 10 <em> </em> ? *” 每天上午10:15触发 </li>
+<li>“0 15 10 <em> </em> ? 2005” 2005年的每天上午10:15触发 </li>
+<li>“0 <em> 14 </em> * ?” 在每天下午2点到下午2:59期间的每1分钟触发 </li>
+<li>“0 0/5 14 <em> </em> ?” 在每天下午2点到下午2:55期间的每5分钟触发 </li>
+<li>“0 0/5 14,18 <em> </em> ?” 在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发 </li>
+<li>“0 0-5 14 <em> </em> ?” 在每天下午2点到下午2:05期间的每1分钟触发 </li>
+<li>“0 10,44 14 ? 3 WED” 每年三月的星期三的下午2:10和2:44触发 </li>
+<li>“0 15 10 ? * MON-FRI” 周一至周五的上午10:15触发 </li>
+<li>“0 15 10 15 * ?” 每月15日上午10:15触发 </li>
+<li>“0 15 10 L * ?” 每月最后一日的上午10:15触发 </li>
+<li>“0 15 10 ? * 6L” 每月的最后一个星期五上午10:15触发 </li>
+<li>“0 15 10 ? * 6L 2002-2005” 2002年至2005年的每月的最后一个星期五上午10:15触发 </li>
+<li>“0 15 10 ? * 6#3” 每月的第三个星期五上午10:15触发 </li>
 </ul>
 
       
@@ -359,7 +398,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/npm/" rel="tag"># npm</a>
+            <a href="/tags/cron/" rel="tag"># cron</a>
           
         </div>
       
@@ -372,15 +411,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/09/How-to-use-Hexo-and-deploy-to-GitHub-Pages/" rel="next" title="How to use Hexo and deploy to GitHub Pages">
+                <i class="fa fa-chevron-left"></i> How to use Hexo and deploy to GitHub Pages
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/09/How-to-use-Hexo-and-deploy-to-GitHub-Pages/" rel="prev" title="How to use Hexo and deploy to GitHub Pages">
-                How to use Hexo and deploy to GitHub Pages <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,17 +481,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,22 +555,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-ERR-cb-never-called"><span class="nav-number">1.</span> <span class="nav-text">npm ERR! cb() never called!</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -718,9 +732,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://surick.github.io/2019/04/09/first-blog/';
-          this.page.identifier = '2019/04/09/first-blog/';
-          this.page.title = 'Solved cb() never called!';
+          this.page.url = 'http://surick.github.io/2019/04/15/cron表达式/';
+          this.page.identifier = '2019/04/15/cron表达式/';
+          this.page.title = 'cron表达式';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://www-evilcry-com.disqus.com/embed.js';

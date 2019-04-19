@@ -253,6 +253,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/19/maven日志包冲突解决/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Surick">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Surick's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/19/maven日志包冲突解决/" itemprop="url">maven日志包冲突解决</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-19T10:31:14+08:00">
+                2019-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/19/maven日志包冲突解决/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/19/maven日志包冲突解决/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="SLF4J-Class-path-contains-multiple-SLF4J-bindings报警告"><a href="#SLF4J-Class-path-contains-multiple-SLF4J-bindings报警告" class="headerlink" title="SLF4J: Class path contains multiple SLF4J bindings报警告"></a>SLF4J: Class path contains multiple SLF4J bindings报警告</h2><blockquote>
+<p>一开始只是在idea里面启动时报警告，并未在意，直到上线时应用启动不了一只到logback相关的错误</p>
+</blockquote>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>腾讯的api包带的日志组件和项目里netty那一块冲突了</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.qcloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;cos_api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.4&lt;/version&gt;</span><br><span class="line">    &lt;exclusions&gt;</span><br><span class="line">        &lt;exclusion&gt;</span><br><span class="line">            &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">        &lt;/exclusion&gt;</span><br><span class="line">    &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/17/怎么让react中某个组件全屏显示/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -468,10 +602,7 @@
 
       
         
-          
-            <p>##Cron表达式示例：</p>
-<p>###表达式说明</p>
-<ul>
+          <h2 id="Cron表达式示例："><a href="#Cron表达式示例：" class="headerlink" title="Cron表达式示例："></a>Cron表达式示例：</h2><h3 id="表达式说明"><a href="#表达式说明" class="headerlink" title="表达式说明"></a>表达式说明</h3><ul>
 <li>“0 0 12 <em> </em> ? “每天12点运行</li>
 <li>“0 15 10 <em> </em> ?”每天10:15运行</li>
 <li>“0 15 10 <em> </em> ? 2011”2011年的每天10：15运行</li>
@@ -484,42 +615,17 @@
 <li>“0 15 10 15 * ?”每月15日10:15分运行。</li>
 <li>“0 15 10 L * ?”每月最后一天10:15分运行。</li>
 <li>“0 15 10 ? * 6L”每月最后一个星期五10:15分运行。</li>
-<li>“0 15 10 ? * 6L 2007-2009”在2007,2008,2009年每个月的最后一个星期五的10:15分运行。</li>
-<li>“0 15 10 ? * 6#3”每月第三个星期五的10:15分运行。</li>
-<li>每隔5秒执行一次：<em>/5 </em> <em> </em> * ?</li>
-<li>每隔1分钟执行一次：0 <em>/1 </em> <em> </em> ?</li>
-<li>每天23点执行一次：0 0 23 <em> </em> ?</li>
-<li>每天凌晨1点执行一次：0 0 1 <em> </em> ?</li>
-<li>每月1号凌晨1点执行一次：0 0 1 1 * ?</li>
-<li>每月最后一天23点执行一次：0 0 23 L * ?</li>
-<li>每周星期天凌晨1点实行一次：0 0 1 ? * L</li>
-<li>在26分、29分、33分执行一次：0 26,29,33 <em> </em> * ?</li>
-<li>每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 <em> </em> ?</li>
-<li>0 0 10,14,16 <em> </em> ? 每天上午10点，下午2点，4点</li>
-<li>0 0/30 9-17 <em> </em> ? 朝九晚五工作时间内每半小时</li>
-<li>0 0 12 ? * WED 表示每个星期三中午12点 </li>
-<li>“0 0 12 <em> </em> ?” 每天中午12点触发 </li>
-<li>“0 15 10 ? <em> </em>“ 每天上午10:15触发 </li>
-<li>“0 15 10 <em> </em> ?” 每天上午10:15触发 </li>
-<li>“0 15 10 <em> </em> ? *” 每天上午10:15触发 </li>
-<li>“0 15 10 <em> </em> ? 2005” 2005年的每天上午10:15触发 </li>
-<li>“0 <em> 14 </em> * ?” 在每天下午2点到下午2:59期间的每1分钟触发 </li>
-<li>“0 0/5 14 <em> </em> ?” 在每天下午2点到下午2:55期间的每5分钟触发 </li>
-<li>“0 0/5 14,18 <em> </em> ?” 在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发 </li>
-<li>“0 0-5 14 <em> </em> ?” 在每天下午2点到下午2:05期间的每1分钟触发 </li>
-<li>“0 10,44 14 ? 3 WED” 每年三月的星期三的下午2:10和2:44触发 </li>
-<li>“0 15 10 ? * MON-FRI” 周一至周五的上午10:15触发 </li>
-<li>“0 15 10 15 * ?” 每月15日上午10:15触发 </li>
-<li>“0 15 10 L * ?” 每月最后一日的上午10:15触发 </li>
-<li>“0 15 10 ? * 6L” 每月的最后一个星期五上午10:15触发 </li>
-<li>“0 15 10 ? * 6L 2002-2005” 2002年至2005年的每月的最后一个星期五上午10:15触发 </li>
-<li>“0 15 10 ? * 6#3” 每月的第三个星期五上午10:15触发 </li>
-</ul>
-
-          
+<li>“0 15 10 ? * 6L 2007-2009”在2007,2008,2009年每个月的最后一个星期五的10:15分运行。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/15/cron表达式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
     
     
     
@@ -880,7 +986,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -893,7 +999,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

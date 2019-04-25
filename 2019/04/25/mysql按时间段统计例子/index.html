@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="npm,">
+  <meta name="keywords" content="mysql,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
-<meta name="keywords" content="npm">
+<meta name="description" content="mysql按时间段统计（年，季度，月，天，时）按年汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sheets from mytable group by date_format(col, &amp;apos;%Y&amp;apos;); 按月汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sh">
+<meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Solved cb() never called!">
-<meta property="og:url" content="http://surick.github.io/2019/04/09/first-blog/index.html">
+<meta property="og:title" content="mysql按时间段统计例子">
+<meta property="og:url" content="http://surick.github.io/2019/04/25/mysql按时间段统计例子/index.html">
 <meta property="og:site_name" content="Surick&#39;s blog">
-<meta property="og:description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
+<meta property="og:description" content="mysql按时间段统计（年，季度，月，天，时）按年汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sheets from mytable group by date_format(col, &amp;apos;%Y&amp;apos;); 按月汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sh">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-09T08:25:46.737Z">
+<meta property="og:updated_time" content="2019-04-25T09:31:28.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Solved cb() never called!">
-<meta name="twitter:description" content="npm ERR! cb() never called! First of all, verify your node.js version using your terminal with this simple command  node -v Clear your npm cache  sudo npm cache clean -f Install the latest version of">
+<meta name="twitter:title" content="mysql按时间段统计例子">
+<meta name="twitter:description" content="mysql按时间段统计（年，季度，月，天，时）按年汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sheets from mytable group by date_format(col, &amp;apos;%Y&amp;apos;); 按月汇总，统计：1select sum(mymoney) as totalmoney, count(*) as sh">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://surick.github.io/2019/04/09/first-blog/">
+  <link rel="canonical" href="http://surick.github.io/2019/04/25/mysql按时间段统计例子/">
 
 
 
 
 
-  <title>Solved cb() never called! | Surick's blog</title>
+  <title>mysql按时间段统计例子 | Surick's blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/09/first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/04/25/mysql按时间段统计例子/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Surick">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Solved cb() never called!</h1>
+          <h1 class="post-title" itemprop="name headline">mysql按时间段统计例子</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T14:16:26+08:00">
-                2019-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T17:30:58+08:00">
+                2019-04-25
               </time>
             
 
@@ -293,6 +293,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -301,8 +323,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/09/first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/09/first-blog/" itemprop="commentCount"></span>
+                <a href="/2019/04/25/mysql按时间段统计例子/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/25/mysql按时间段统计例子/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -335,12 +357,21 @@
       
 
       
-        <h2 id="npm-ERR-cb-never-called"><a href="#npm-ERR-cb-never-called" class="headerlink" title="npm ERR! cb() never called!"></a>npm ERR! cb() never called!</h2><ul>
-<li>First of all, verify your node.js version using your terminal with this simple command<br>  <code>node -v</code></li>
-<li>Clear your npm cache<br>  <code>sudo npm cache clean -f</code></li>
-<li>Install the latest version of the Node helper<br>  <code>npm install -g n</code></li>
-<li>Tell the helper (n) to install the latest stable version of Node<br>  <code>sudo n stable</code></li>
-<li>After previous commands finish you will be up-to-date. Let’s run our install again<br>  <code>npm install</code></li>
+        <h2 id="mysql按时间段统计（年，季度，月，天，时）"><a href="#mysql按时间段统计（年，季度，月，天，时）" class="headerlink" title="mysql按时间段统计（年，季度，月，天，时）"></a><code>mysql</code>按时间段统计（年，季度，月，天，时）</h2><h3 id="按年汇总，统计："><a href="#按年汇总，统计：" class="headerlink" title="按年汇总，统计："></a>按年汇总，统计：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(mymoney) as totalmoney, count(*) as sheets from mytable group by date_format(col, &apos;%Y&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="按月汇总，统计："><a href="#按月汇总，统计：" class="headerlink" title="按月汇总，统计："></a>按月汇总，统计：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(mymoney) as totalmoney, count(*) as sheets from mytable group by date_format(col, &apos;%Y-%m&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="按季度汇总，统计："><a href="#按季度汇总，统计：" class="headerlink" title="按季度汇总，统计："></a>按季度汇总，统计：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(mymoney) as totalmoney,count(*) as sheets from mytable group by concat(date_format(col, &apos;%Y&apos;),FLOOR((date_format(col, &apos;%m&apos;)+2)/3));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(mymoney) as totalmoney,count(*) as sheets from mytable group by concat(date_format(col, &apos;%Y&apos;),FLOOR((date_format(col, &apos;%m&apos;)+2)/3));</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="按小时："><a href="#按小时：" class="headerlink" title="按小时："></a>按小时：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(mymoney) as totalmoney,count(*) as sheets from mytable group by date_format(col, &apos;%Y-%m-%d %H &apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="查询本年度的数据"><a href="#查询本年度的数据" class="headerlink" title="查询本年度的数据:"></a>查询本年度的数据:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM mytable WHERE year(FROM_UNIXTIME(my_time)) = year(curdate())</span><br></pre></td></tr></table></figure>
+<h3 id="查询数据附带季度数"><a href="#查询数据附带季度数" class="headerlink" title="查询数据附带季度数:"></a>查询数据附带季度数:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT id, quarter(FROM_UNIXTIME(my_time)) FROM mytable;</span><br></pre></td></tr></table></figure>
+<h3 id="查询本季度的数据"><a href="#查询本季度的数据" class="headerlink" title="查询本季度的数据:"></a>查询本季度的数据:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM mytable WHERE quarter(FROM_UNIXTIME(my_time)) = quarter(curdate());</span><br></pre></td></tr></table></figure>
+<h3 id="本月统计"><a href="#本月统计" class="headerlink" title="本月统计:"></a>本月统计:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from mytable where month(my_time1) = month(curdate()) and year(my_time2) = year(curdate())</span><br></pre></td></tr></table></figure>
+<h3 id="本周统计"><a href="#本周统计" class="headerlink" title="本周统计:"></a>本周统计:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from mytable where month(my_time1) = month(curdate()) and week(my_time2) = week(curdate())</span><br></pre></td></tr></table></figure>
+<h3 id="N天内记录"><a href="#N天内记录" class="headerlink" title="N天内记录:"></a>N天内记录:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WHERE TO_DAYS(NOW())-TO_DAYS(时间字段)&lt;=N</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	COUNT(u.id) AS total,</span><br><span class="line">	DATE_FORMAT(</span><br><span class="line">		FROM_UNIXTIME(u.reg_time),</span><br><span class="line">		&apos;%Y-%m-%d&apos;</span><br><span class="line">	) AS date</span><br><span class="line">FROM</span><br><span class="line">	apps_user AS u</span><br><span class="line">WHERE</span><br><span class="line">	FROM_UNIXTIME(u.reg_time) &gt;= DATE_ADD(NOW(), INTERVAL - 7 DAY)</span><br><span class="line">GROUP BY</span><br><span class="line">	date</span><br></pre></td></tr></table></figure>
+<h3 id="本篇文章来源于Linux-公社网站"><a href="#本篇文章来源于Linux-公社网站" class="headerlink" title="本篇文章来源于Linux 公社网站"></a>本篇文章来源于<a href="www.linuxidc.com">Linux 公社网站</a></h3><ul>
+<li><a href="http://www.linuxidc.com/Linux/2012-11/74145.htm" target="_blank" rel="noopener">原文链接</a></li>
 </ul>
 
       
@@ -359,7 +390,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/npm/" rel="tag"># npm</a>
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -372,15 +403,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/25/tomcat上传文件默认权限问题/" rel="next" title="tomcat上传文件默认权限问题">
+                <i class="fa fa-chevron-left"></i> tomcat上传文件默认权限问题
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/09/How-to-use-Hexo-and-deploy-to-GitHub-Pages/" rel="prev" title="How to use Hexo and deploy to GitHub Pages">
-                How to use Hexo and deploy to GitHub Pages <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-ERR-cb-never-called"><span class="nav-number">1.</span> <span class="nav-text">npm ERR! cb() never called!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql按时间段统计（年，季度，月，天，时）"><span class="nav-number">1.</span> <span class="nav-text">mysql按时间段统计（年，季度，月，天，时）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按年汇总，统计："><span class="nav-number">1.1.</span> <span class="nav-text">按年汇总，统计：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按月汇总，统计："><span class="nav-number">1.2.</span> <span class="nav-text">按月汇总，统计：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按季度汇总，统计："><span class="nav-number">1.3.</span> <span class="nav-text">按季度汇总，统计：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按小时："><span class="nav-number">1.4.</span> <span class="nav-text">按小时：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询本年度的数据"><span class="nav-number">1.5.</span> <span class="nav-text">查询本年度的数据:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询数据附带季度数"><span class="nav-number">1.6.</span> <span class="nav-text">查询数据附带季度数:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询本季度的数据"><span class="nav-number">1.7.</span> <span class="nav-text">查询本季度的数据:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本月统计"><span class="nav-number">1.8.</span> <span class="nav-text">本月统计:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本周统计"><span class="nav-number">1.9.</span> <span class="nav-text">本周统计:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#N天内记录"><span class="nav-number">1.10.</span> <span class="nav-text">N天内记录:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本篇文章来源于Linux-公社网站"><span class="nav-number">1.11.</span> <span class="nav-text">本篇文章来源于Linux 公社网站</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -727,9 +758,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://surick.github.io/2019/04/09/first-blog/';
-          this.page.identifier = '2019/04/09/first-blog/';
-          this.page.title = 'Solved cb() never called!';
+          this.page.url = 'http://surick.github.io/2019/04/25/mysql按时间段统计例子/';
+          this.page.identifier = '2019/04/25/mysql按时间段统计例子/';
+          this.page.title = 'mysql按时间段统计例子';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://www-evilcry-com.disqus.com/embed.js';

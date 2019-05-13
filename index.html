@@ -253,6 +253,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/05/13/监控环境常用的命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Surick">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Surick's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/13/监控环境常用的命令/" itemprop="url">监控环境常用的命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-13T14:09:30+08:00">
+                2019-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/13/监控环境常用的命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/13/监控环境常用的命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="生产环境服务器变慢"><a href="#生产环境服务器变慢" class="headerlink" title="生产环境服务器变慢"></a>生产环境服务器变慢</h2><h3 id="查看整机情况"><a href="#查看整机情况" class="headerlink" title="查看整机情况"></a>查看整机情况</h3><ul>
+<li>使用<code>top</code>命令查看CPU占用率、内存占用率以及第一行的<code>load average</code></li>
+<li><code>load average</code>后的三个数字分别记录了一分钟、五分钟、以及十五分钟的系统平均负载</li>
+<li>还可以使用<code>uptime</code>命令，是系统性能命令的精简版</li>
+</ul>
+<h3 id="查看-CPU-情况"><a href="#查看-CPU-情况" class="headerlink" title="查看 CPU 情况"></a>查看 CPU 情况</h3><ul>
+<li>使用<code>vmstat -n 2 3</code>代表每2秒采样一次，一共采样3次</li>
+<li><code>procs</code>中r代表运行和等待CPU时间片的进程数，整个系统的运行队列不应超过总核数的2倍，否则代表系统压力过大<ul>
+<li>b 代表等待资源如磁盘I/O，网络 I/O的进程数cpu中</li>
+<li>us 代表用户进程消耗CPU时间百分比，如果长期大于50%要优化程序</li>
+<li>sy 代表内核进程消耗CPU时间百分比us + sy参考值为80%，如果和大于80%，可能存在CPU不足</li>
+</ul>
+</li>
+<li>使用<code>mpstat -P ALL 2</code>查看所有CPU核信息</li>
+<li>使用<code>pidstat -u 1 -p pid</code>查看每个进程使用CPU的用量分解信息</li>
+</ul>
+<h3 id="查看内存信息"><a href="#查看内存信息" class="headerlink" title="查看内存信息"></a>查看内存信息</h3><ul>
+<li>使用<code>free -m</code>来查看内存情况，单位为mb,应用程序可用内存/系统物理内存 应该在20%~70%</li>
+<li>使用<code>pidstat -p pid -r</code>采样间隔秒数</li>
+</ul>
+<h3 id="查看硬盘信息"><a href="#查看硬盘信息" class="headerlink" title="查看硬盘信息"></a>查看硬盘信息</h3><ul>
+<li>使用<code>df -h</code>查看磁盘IO</li>
+<li>使用<code>iostat -xdk 2 3</code><ul>
+<li>rkB/s 每秒读取数据量</li>
+<li>wkB/s 每秒写入数据量</li>
+<li>svctm I/O请求的平均服务时间，单位为ms</li>
+<li>util 一秒有百分之多少的时间用于I/O操作</li>
+</ul>
+</li>
+<li>使用<code>pidstat -d采样间隔秒 -p pid</code></li>
+</ul>
+<h3 id="查看网络IO"><a href="#查看网络IO" class="headerlink" title="查看网络IO"></a>查看网络IO</h3><ul>
+<li>使用<code>ifstat</code>采样间隔秒</li>
+</ul>
+<h3 id="CPU-占用过高的分析"><a href="#CPU-占用过高的分析" class="headerlink" title="CPU 占用过高的分析"></a>CPU 占用过高的分析</h3><ul>
+<li>使用<code>top</code>命令找出CPU占比最高的进程</li>
+<li><code>ps -ef</code>或者<code>jps</code>进一步定位该进程信息定位到具体线程或代码</li>
+<li>使用<code>ps -mp pid -o THREAD,tid,time</code><ul>
+<li>-m 显示所有线程</li>
+<li>-p pid进程使用cpu的时间</li>
+<li>-o 后是用户自定义格式将需要的线程id转换为16进制（英文小写格式）</li>
+</ul>
+</li>
+<li><code>jstack 进程id | grep tid -A60</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://surick.github.io/2019/05/10/mysql中group-by报错/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1620,7 +1816,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1631,7 +1827,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1642,7 +1838,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
